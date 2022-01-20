@@ -25,7 +25,7 @@ Similarly, exception handling, utility, web security classes have been configure
 
 ## Things to consider in future
 1. JUnit test cases - considering all testcases for each method.
-2. angular test cases - 
+2. angular test cases 
 3. e2e test cases 
 4. Code optimisation - using caching to store todos at client/server side.
 
