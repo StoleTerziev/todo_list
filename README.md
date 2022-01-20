@@ -11,7 +11,7 @@
 
 # Code Explaination
 
-The entire coding logic is divided into two main part, frontend and backend code. Frontend is developed using Angular and backend using Spring Boot. These technologies have been chosen because of their ease of development.
+The entire coding logic is divided into two main part, frontend and backend code. Frontend is developed using Angular and backend using Spring Boot. 
 
 ## Front End Code Explaination
 Front end code is developed using components like login, logout, menu, home, todo list and todo.
