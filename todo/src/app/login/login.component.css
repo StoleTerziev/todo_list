@@ -1,0 +1,30 @@
+.container-card {
+  margin-left: 550px;
+  width: 35%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 100px;
+}
+
+.btn-login {
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.example-form {
+  display: grid;
+}
+
+.card-h {
+  font-size: 27px;
+}
+
+.mat-card-header .mat-card-title {
+  margin-bottom: 30px;
+}
+
+
+.alert-warning{
+  color:red;
+}

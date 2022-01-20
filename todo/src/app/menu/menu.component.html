@@ -1,0 +1,41 @@
+<mat-toolbar color="is-dark">
+  <mat-toolbar-row>
+    <div><a routerLink="/home" class="navbar-brand"> TODO APP</a></div>
+
+    <span class="menu-spacer"></span>
+    <div>
+      <a
+        mat-button
+        *ngIf="authenticationService.isUserLoggedIn()"
+        routerLink="/todo-list"
+      >
+        TODO List
+      </a>
+    </div>
+
+    <div>
+      <a
+        mat-button
+        *ngIf="!authenticationService.isUserLoggedIn()"
+        routerLink="/login"
+      >
+        Login
+      </a>
+      <a
+        mat-button
+        *ngIf="!authenticationService.isUserLoggedIn()"
+        routerLink="/signup"
+      >
+        Sign Up
+      </a>
+    </div>
+    <div>
+      <a
+        mat-button
+        *ngIf="authenticationService.isUserLoggedIn()"
+        routerLink="/logout"
+        >Logout</a
+      >
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

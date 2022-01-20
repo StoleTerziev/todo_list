@@ -1,0 +1,89 @@
+<mat-card class="container-card">
+  <mat-card-header>
+    <mat-card-title class="card-h">Sign Up</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form
+      class="example-form"
+      (ngSubmit)="!signupForm.invalid && signup(signupForm)"
+      #signupForm="ngForm"
+    >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          type="text"
+          #name="ngModel"
+          [(ngModel)]="signUpRequest.name"
+          name="name"
+          required="required"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Username</mat-label>
+        <input
+          matInput
+          type="text"
+          #username="ngModel"
+          [ngModel]="signUpRequest.username"
+          name="username"
+          required="required"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          #email="ngModel"
+          [ngModel]="signUpRequest.email"
+          name="email"
+          required="required"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          #password="ngModel"
+          [ngModel]="signUpRequest.password"
+          name="password"
+          required="required"
+          minlength="6"
+          and
+          maxlength="20"
+        />
+      </mat-form-field>
+
+      <mat-card-actions>
+        <button mat-flat-button color="primary" class="btn-login" type="submit">
+          Sign up
+        </button>
+        &nbsp;&nbsp; Already Registered?
+        <button mat-flat-button color="primary" routerLink="/login">
+          Login Here
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+
+  <div class="alert alert-warning" *ngIf="errorResponse">
+    {{ errorResponse }}
+  </div>
+  <div class="alert alert-success" *ngIf="successResponse">
+    {{ successResponse.message }}
+  </div>
+  <div
+    class="alert alert-warning"
+    *ngIf="signupForm.dirty && signupForm.invalid"
+  >
+    Enter valid values
+  </div>
+  <div class="alert alert-warning" *ngIf="signupForm.dirty && email.invalid">
+    Enter valid email address
+  </div>
+  <div class="alert alert-warning" *ngIf="signupForm.dirty && password.invalid">
+    Password length should be in between 6 and 20
+  </div>
+</mat-card>

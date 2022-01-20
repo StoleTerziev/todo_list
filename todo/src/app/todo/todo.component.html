@@ -1,0 +1,68 @@
+<div class="container-todo">
+  <h1 class="todo-list">Todo</h1>
+
+  <mat-card class="form-todo">
+    <form
+      (ngSubmit)="!todoForm.invalid && saveTodo()"
+      #todoForm="ngForm"
+      name="todoForm"
+    >
+      <div class="description">
+        <label>Description</label>
+        <input
+          type="text"
+          #description="ngModel"
+          [(ngModel)]="todo.description"
+          class="form-control"
+          name="description"
+          required="required"
+          minlength="5"
+        />
+      </div>
+
+      <div class="target-date">
+        <label>Target Date</label>
+
+        <input
+          type="date"
+          #targetDate="ngModel"
+          [ngModel]="todo.targetDate | date: 'yyyy-MM-dd'"
+          (ngModelChange)="todo.targetDate = $event"
+          class="form-control"
+          name="targetDate"
+          required="required"
+        />
+      </div>
+      <div class="isDone">
+        <input
+          class="toggle"
+          #done="ngModel"
+          name="done"
+          type="checkbox"
+          [ngModel]="todo.done"
+          [checked]="todo.done"
+        />&nbsp;
+        <label>Is Done</label>
+      </div>
+      <div class="btns">
+        <button mat-flat-button color="primary" type="submit">Save</button>
+        &nbsp;&nbsp;
+        <button mat-flat-button color="primary" routerLink="/todo-list">
+          Back
+        </button>
+      </div>
+    </form>
+  </mat-card>
+  <div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">
+    Enter valid values
+  </div>
+  <div class="alert alert-warning" *ngIf="todoForm.dirty && targetDate.invalid">
+    Enter valid Target Date
+  </div>
+  <div
+    class="alert alert-warning"
+    *ngIf="todoForm.dirty && description.invalid"
+  >
+    Enter atleast 5 characters in Description
+  </div>
+</div>

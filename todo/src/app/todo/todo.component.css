@@ -1,0 +1,34 @@
+.todo-list {
+  text-align: center;
+  font-size: 35px;
+  font-family: system-ui;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.target-date {
+  width: 45%;
+  margin-top: 10px;
+}
+
+.form-todo {
+  margin-left: 33%;
+  margin-top: 40px;
+  margin-right: 500px;
+  height: 250px;
+}
+
+.isDone {
+  margin-top: 10px;
+}
+.btns {
+  float: right;
+}
+
+.alert-warning {
+  width: 30%;
+  margin-left: 33%;
+  margin-top: 20px;
+  margin-right: 500px;
+  color: red;
+}

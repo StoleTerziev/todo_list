@@ -1,0 +1,16 @@
+table {
+  width: 70%;
+  margin-left: 16%;
+  margin-top: 40px;
+}
+
+.todo-list {
+  text-align: center;
+  font-size: 35px;
+  font-family: system-ui;
+  font-weight: bold;
+}
+
+.add-new-btn {
+  margin-left: 50px;
+}
