@@ -30,10 +30,11 @@ On the following image is shown the packaging structure of the application and h
 
 # Concepts used in the application 
 
-@RestController
-@Service
-@Entity
-@Jpa Repository
+* [@RestController](https://spring.io/guides/gs/rest-service/)
+* [@Service](https://spring.io/guides/gs/rest-service/)
+* [@Entity](https://spring.io/guides/gs/rest-service/)
+* [Jpa Repository](https://spring.io/guides/gs/crud-with-vaadin/)
+
 
 ## Things to consider in future
 1. JUnit test cases - considering all testcases for each method.
