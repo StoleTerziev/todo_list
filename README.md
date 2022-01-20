@@ -23,6 +23,10 @@ Backend is organised into JwtAuthenticationRestController and TodoController pro
 H2 with hibernate is configured to store in-memory data.
 Similarly, exception handling, utility, web security classes have been configured.
 
+
+![packaging_structure](https://user-images.githubusercontent.com/11914457/150404135-a71ca49f-5974-40dd-8ca6-ed271713231c.png)
+
+
 ## Things to consider in future
 1. JUnit test cases - considering all testcases for each method.
 2. angular test cases 
